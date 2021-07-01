@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/opt/bin/bash
 # Copyright (C) 2020 Private Internet Access, Inc.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -78,8 +78,8 @@ if test -t 1; then
 fi
 
 # Only allow script to run as
-if [ "$(whoami)" != "root" ]; then
-  echo -e "${RED}This script needs to be run as root. Try again with 'sudo $0'${NC}"
+if [ "$(whoami)" != "admin" ]; then
+  echo -e "${RED}This script needs to be run as admin. Try again with 'sudo $0'${NC}"
   exit 1
 fi
 
